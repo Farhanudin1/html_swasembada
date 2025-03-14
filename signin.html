@@ -6,110 +6,148 @@
     <title>Sign In</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
-        /* Styling for the page */
-        body {
-            font-family: 'Open Sans', Arial, sans-serif;
-            line-height: 1.5;
-            font-size: 16px;
-            color: #000000;
-            background-color: #f0f0f0;
-            background-image: url('https://raw.githubusercontent.com/Farhanudin1/deep-learning-swasembada-pangan/d2a6e07cea8548d238bf0695fee226797d5f1125/Gambar1.png');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            height: 100vh;
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            margin: 0;
-        }
+        /* Styling untuk body */
+/* Styling untuk body */
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    line-height: 1.5;
+    font-size: 16px;
+    color: #000000;
+    background-color: #f0f0f0;
+    background-image: url('https://raw.githubusercontent.com/Farhanudin1/deep-learning-swasembada-pangan/d2a6e07cea8548d238bf0695fee226797d5f1125/Gambar1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+}
 
-        .fh5co-form {
-            padding: 30px;
-            background: rgba(164, 199, 167, 0.5);
-            box-shadow: -4px 7px 46px 2px rgba(0, 0, 0, 0.1);
-            width: 350px;
-            margin-left: 50px;
-            border-radius: 8px;
-        }
+/* Styling form */
+.fh5co-form {
+    padding: 30px;
+    background: rgba(164, 199, 167, 0.5);
+    box-shadow: -4px 7px 46px 2px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    margin-left: 50px;
+    border-radius: 8px;
+}
 
-        @media screen and (max-width: 768px) {
-            body {
-                justify-content: center;
-            }
+/* RESPONSIVE DESIGN */
+/* Tablet */
+@media screen and (max-width: 768px) {
+    body {
+        justify-content: center;
+        padding: 10px;
+    }
 
-            .fh5co-form {
-                width: 90%;
-                margin-left: 0;
-            }
-        }
+    .fh5co-form {
+        width: 90%;
+        margin-left: 0;
+        padding: 20px;
+    }
+}
 
-        .fh5co-form h2 {
-            text-transform: none;
-            letter-spacing: 2px;
-            font-size: 20px;
-            margin-bottom: 30px;
-            color: #000000;
-        }
+/* Mobile */
+@media screen and (max-width: 480px) {
+    .fh5co-form {
+        width: 95%;
+        padding: 15px;
+    }
 
-        .fh5co-form .form-group {
-            margin-bottom: 20px;
-            position: relative;
-        }
+    .fh5co-form h2 {
+        font-size: 18px;
+        text-align: center;
+    }
 
-        .fh5co-form .form-control {
-            font-size: 16px;
-            font-weight: 300;
-            border: none;
-            border-bottom: 2px solid #797979;
-            background: transparent;
-            outline: none;
-            width: 100%;
-            padding: 10px 0;
-            transition: border-color 0.3s ease;
-        }
+    .btn-signin {
+        font-size: 14px;
+        padding: 10px;
+    }
 
-        .fh5co-form .form-control:focus {
-            border-bottom: 2px solid #00ff11;
-        }
+    .form-control {
+        font-size: 14px;
+    }
 
-        .fh5co-form .form-control::placeholder {
-            color: #808080;
-            font-style: italic;
-        }
+    .form-group p {
+        font-size: 12px;
+    }
+}
 
-        .btn-signin {
-            text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            margin: 0 10px;
-            font-size: 1rem;
-            transition: 0.3s ease;
-            background: transparent;
-            color: rgba(0, 109, 0, 0.9);
-            border: 1px solid rgba(0, 109, 0, 0.9);
-            display: inline-block;
-            text-align: center;
-        }
+/* Judul Form */
+.fh5co-form h2 {
+    text-transform: none;
+    letter-spacing: 2px;
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: #000000;
+}
 
-        .btn-signin:hover {
-            background: rgba(0, 255, 0, 0.5);
-            color: #ffffff;
-        }
+/* Styling untuk input */
+.fh5co-form .form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
 
-        .fh5co-form .form-group p {
-            font-size: 14px;
-            color: #000000;
-        }
+.fh5co-form .form-control {
+    font-size: 16px;
+    font-weight: 300;
+    border: none;
+    border-bottom: 2px solid #797979;
+    background: transparent;
+    outline: none;
+    width: 100%;
+    padding: 10px 0;
+    transition: border-color 0.3s ease;
+}
 
-        .fh5co-form .form-group p a {
-            color: #0f6d00;
-            text-decoration: none;
-        }
-        
-        .fh5co-form .form-group p a:hover {
-            color: #00ff04;
-        }
+.fh5co-form .form-control:focus {
+    border-bottom: 2px solid #00ff11;
+}
+
+.fh5co-form .form-control::placeholder {
+    color: #808080;
+    font-style: italic;
+}
+
+/* Tombol Sign In */
+.btn-signin {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 0 10px;
+    font-size: 1rem;
+    transition: 0.3s ease;
+    background: transparent;
+    color: rgba(0, 109, 0, 0.9);
+    border: 1px solid rgba(0, 109, 0, 0.9);
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-signin:hover {
+    background: rgba(0, 255, 0, 0.5);
+    color: #ffffff;
+}
+
+/* Link dalam form */
+.fh5co-form .form-group p {
+    font-size: 14px;
+    color: #000000;
+    text-align: center;
+}
+
+.fh5co-form .form-group p a {
+    color: #0f6d00;
+    text-decoration: none;
+}
+
+.fh5co-form .form-group p a:hover {
+    color: #00ff04;
+}
+
     </style>
 </head>
 <body>
